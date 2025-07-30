@@ -1,5 +1,5 @@
+/* eslint-disable */
 import React, { useRef, useEffect, useState } from "react";
-
 import logo from "./assets/logo.svg";
 import screenshot from "./assets/screenshot.svg";
 import down from "./assets/down.svg";
@@ -362,7 +362,7 @@ function App() {
           <span
             style={{
               fontSize: "clamp(40px, 5vw, 60px)",
-              fontWeight: 300,
+              fontWeight: 150,
               alignSelf: isMobile ? "flex-start" : "auto",
               textAlign: "left",
               width: isMobile ? "100%" : "auto",
@@ -379,7 +379,7 @@ function App() {
             </span>
           </span>
           <div>
-            {isWide && <img src={screenshot} style={styles.image} />}
+            {/* {isWide && <img src={screenshot} style={styles.image} />} */}
             <img
               src={screenshot}
               style={{
@@ -456,7 +456,7 @@ function App() {
       />
       <div
         style={{
-          fontSize: "clamp(12px, 1.5vw, 20px)",
+          fontSize: "14px",
           fontWeight: "300",
           color: "#828282",
           textAlign: "center",
