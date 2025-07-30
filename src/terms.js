@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default [
   {
     title: "pagether 이용 약관",

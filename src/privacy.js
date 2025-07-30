@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default [
   {
     title: "pagether 개인정보 처리 방침",
