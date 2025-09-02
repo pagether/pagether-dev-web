@@ -115,7 +115,9 @@ function App() {
             <span style={sectionStyles.title}>{title}</span>
             <span style={sectionStyles.description}>{description}</span>
           </div>
-          <img src={image} alt="feature" style={sectionStyles.image} />
+          <object data={image} type="image/svg+xml" style={sectionStyles.image}>
+            <img src={image} alt="feature" style={sectionStyles.image} />
+          </object>
         </div>
       </div>
     );
@@ -139,7 +141,7 @@ function App() {
     };
 
     window.addEventListener("resize", handleResize);
-    
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -156,7 +158,6 @@ function App() {
   //이용약관, 개인정보처리방침 부분
   if (activePolicy) {
     const content = selectedTab === "terms" ? termsContent : privacyContent;
-
 
     return (
       <div
@@ -342,7 +343,7 @@ function App() {
           <a
             href="https://apps.apple.com/kr/app/%ED%8E%98%EC%9D%B4%EC%A7%80%EB%8D%94-%EB%8F%85%EC%84%9C-%EA%B8%B0%EB%A1%9D-sns/id6747913470"
             target="_blank"
-            rel="noopener noreferrer" 
+            rel="noopener noreferrer"
             style={{ textDecoration: "none" }}
           >
             <div>
@@ -380,14 +381,24 @@ function App() {
           </span>
           <div>
             {/* {isWide && <img src={screenshot} style={styles.image} />} */}
-            <img
-              src={screenshot}
+            <object
+              data={screenshot}
+              type="image/svg+xml"
               style={{
                 width: "clamp(235px, 30vw, 350px)",
                 height: "auto",
                 marginTop: isMobile ? "20px" : "0",
               }}
-            />
+            >
+              <img
+                src={screenshot}
+                style={{
+                  width: "clamp(235px, 30vw, 350px)",
+                  height: "auto",
+                  marginTop: isMobile ? "20px" : "0",
+                }}
+              />
+            </object>
           </div>
         </div>
         <div
